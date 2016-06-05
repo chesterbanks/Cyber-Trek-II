@@ -35,6 +35,9 @@ var secret = false; // If you change this to false, do not vote this program up.
     5. Solve puzzles
 */
 
+textAlign(CENTER, CENTER);
+textFont(createFont("Andale Mono"));
+
 var scene = "Load";
 
 /** Maps */
@@ -192,7 +195,6 @@ var hat = "Baseball";
 var characterColor = color(255, 111, 0);
 
 var awesomeText = function(x, y, size, word, color){
-    textFont(createFont("Consolas Bold"));
     textAlign(CENTER, CENTER);
     textSize(size);
     fill(0, 0, 0, 30);
@@ -335,7 +337,6 @@ var TalkieIcon = function(){
         TalkieButton(205, 265, 70, 30, "&", "T_Char", 20, "Customize your character some more!");
         fill(245, 245, 245, random(100, 255));
         textSize(13);
-        textFont(createFont("Consolas"));
         text("Press a key to go back", 200, 385);
         textFont(createFont("Consolas Bold"));
         if(keyIsPressed){
@@ -708,10 +709,8 @@ var draw = function() {
             }
         }
         if(scene === "Menu"){
-            textAlign(CENTER, CENTER);
             cyberBG();
             fill(0, 255, 255, 230);
-            textFont(createFont("Consolas Bold"));
             textSize(77);
             text("CYBER", 200, 165);
             text("TREK", 223, 218);
@@ -909,7 +908,7 @@ var draw = function() {
             }
             fill(0, 255, 0);
             textSize(13);
-            text("Welcome, " + name + ", to The Cyber Station! You can go\nplaces from here. Just hover over one of the icons\nto see how much the tickets cost. Click it to buy\na ticket and go there!", 200, 50);
+            text("Welcome, " + name + ", to The Cyber Station! You can go places from here. Just hover over one of the icons to see how much the tickets cost. Click it to buy a ticket and go there!", 15, -110, 380, 300);
             fill(245);
             textSize(11);
             text("You have " + coins + " coins.", 61, 385);
